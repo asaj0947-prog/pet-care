@@ -194,6 +194,7 @@ export default function Home() {
               <div className="grid gap-3">
                 {[
                   ["宠物类型", "猫 / 小型犬 / 中大型犬"],
+                  ["期望到店日期", "明天 09:30"],
                   ["常用时段", "10:00 - 20:30"],
                   ["预计耗时", "60 - 150 分钟"]
                 ].map(([label, value]) => (
