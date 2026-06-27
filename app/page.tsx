@@ -392,10 +392,10 @@ export default function Home() {
             </div>
 
             <div
-              className="relative flex min-h-[360px] items-stretch overflow-hidden rounded-lg bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,249,239,0.24)),url('/assets/pet-map-ai.png'),linear-gradient(135deg,#f8f3e8_0%,#eef6ef_52%,#fff4eb_100%)] bg-cover bg-center p-5 shadow-map"
+              className="relative flex flex-col gap-4 overflow-hidden rounded-lg bg-[#f8f3e8] p-4 shadow-map"
               aria-label="门店地址"
             >
-              <div className="relative z-[1] min-h-[316px] w-full rounded-lg border border-[#3f5b49]/15 bg-white/10 backdrop-blur-[0.5px]">
+              <div className="relative z-[1] min-h-[420px] w-full rounded-lg border border-[#3f5b49]/15 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,249,239,0.24)),url('/assets/pet-map-ai.png'),linear-gradient(135deg,#f8f3e8_0%,#eef6ef_52%,#fff4eb_100%)] bg-contain bg-center bg-no-repeat backdrop-blur-[0.5px] max-[620px]:min-h-[320px]">
                 <span className="absolute left-[11%] top-[34%] rotate-[31deg] rounded-full bg-white/85 px-2.5 py-1.5 text-[13px] font-extrabold text-[#2a3f32]/70 shadow-[0_8px_20px_rgba(63,91,73,0.1)]">
                   陕西北路
                 </span>
@@ -419,7 +419,7 @@ export default function Home() {
                 </div>
               </div>
               <div
-                className="absolute bottom-4 left-4 right-4 z-[2] rounded-lg bg-white/90 p-4 text-ink"
+                className="z-[2] rounded-lg bg-white/90 p-4 text-ink"
                 aria-label="门店信息"
               >
                 <strong className="mb-2 block text-lg">暖爪宠物洗护</strong>
