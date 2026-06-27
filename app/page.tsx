@@ -1,4 +1,5 @@
 import SpaceCarousel from "@/components/SpaceCarousel";
+import ReviewsCarousel from "@/components/ReviewsCarousel";
 
 const services = [
   {
@@ -56,15 +57,43 @@ const plans = [
 const reviews = [
   {
     body: "我家狗胆子小，以前洗澡会发抖。店员很有耐心，洗完还发了过程照片，状态很放松。",
-    name: "豆豆主人"
+    name: "豆豆主人",
+    pet: "柴犬 / 基础洗护"
   },
   {
     body: "长毛猫打结处理得很细，没有硬拽。回家后毛顺了很多，护理建议也很实用。",
-    name: "奶盖主人"
+    name: "奶盖主人",
+    pet: "布偶猫 / 开结护理"
   },
   {
     body: "价格透明，预约准时，修剪出来的造型很自然。现在基本每个月固定来一次。",
-    name: "毛球主人"
+    name: "毛球主人",
+    pet: "比熊 / 精致洗剪"
+  },
+  {
+    body: "第一次带猫来洗澡，本来很担心应激。店里猫狗分区，洗护师会先安抚，结束后精神状态很好。",
+    name: "年糕主人",
+    pet: "英短 / 猫咪洗护"
+  },
+  {
+    body: "萨摩换毛季太夸张，做完除浮毛护理后家里清爽很多。工作人员还教了日常梳毛频率。",
+    name: "雪球主人",
+    pet: "萨摩耶 / 除浮毛"
+  },
+  {
+    body: "老年犬腿脚不太好，店员全程动作很轻，吹干也会分段休息。能感受到是真的照顾宠物情绪。",
+    name: "可乐主人",
+    pet: "老年犬 / 温和洗护"
+  },
+  {
+    body: "临时需要拍照前整理造型，修剪得干净但不夸张，脸型和尾巴都很自然，拍出来特别精神。",
+    name: "芝麻主人",
+    pet: "泰迪 / 造型修剪"
+  },
+  {
+    body: "每次洗完都会收到照片和皮肤状态提醒，哪里有点干、耳朵要注意都会说明，挺安心的。",
+    name: "芋圆主人",
+    pet: "柯基 / 日常护理"
   }
 ];
 
@@ -333,18 +362,7 @@ export default function Home() {
               title="主人们的真实反馈"
               body="我们更重视长期稳定的护理关系，而不是一次性的漂亮照片。"
             />
-            <div className="grid grid-cols-3 gap-4 max-[900px]:grid-cols-2 max-[620px]:grid-cols-1">
-              {reviews.map((review) => (
-                <article
-                  className="rounded-lg border border-line bg-[#fcfbf6] p-6"
-                  key={review.name}
-                >
-                  <div className="text-lg text-gold">★★★★★</div>
-                  <p className="my-4 leading-8 text-[#4b5a52]">{review.body}</p>
-                  <strong className="text-sage-dark">{review.name}</strong>
-                </article>
-              ))}
-            </div>
+            <ReviewsCarousel reviews={reviews} />
           </div>
         </section>
 
